@@ -6,15 +6,10 @@ var voteAge = function(age) {
       return false;
     }
   }
-  
-// var stance = function(abortion) {
-//     if (abortion === forIt && !==againstIt && !==noOpinion) [
-//       return true;
-//     }else if (true) {
+
+  var politicalView = $("input:radio[name=abortion]:checked").val();
+// var proAbortion = function()
 //
-//     }
-//     ]
-// }
 
 
 
@@ -23,7 +18,7 @@ $(document).ready(function() {
     var inputOver18 = parseInt($("input#inputAge").val());
     var result = voteAge(inputOver18);
 
-    if(result === true) {
+    if(result) {
       $(".overAge").show();
       $(".underAge").hide();
       $("#meter").show();
@@ -33,7 +28,43 @@ $(document).ready(function() {
       $("#meter").hide();
     }
 
+      if(politicalView === "option1") {
+        $("p#liberal").show();
+        $("p#conservative").hide();
+        $("p#moderate").hide();
+      }
+      if(politicalView === "option1") {
+        $("p#conservative").show();
+        $("p#liberal").hide();
+        $("p#moderate").hide();
+      }
+      if(politicalView === "option1") {
+        $("p#moderate").show();
+        $("p#conservative").hide();
+        $("p#liberal").hide();
+      }
+
     event.preventDefault();
 
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+// var stance = function(abortion) {
+//     if (abortion === forIt && !==againstIt && !==noOpinion) [
+//       return true;
+//     }else if (true) {
+//
+//     }
+//     ]
+// }
