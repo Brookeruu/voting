@@ -6,7 +6,15 @@ var voteAge = function(age) {
       return false;
     }
   }
-
+  
+// var stance = function(abortion) {
+//     if (abortion === forIt && !==againstIt && !==noOpinion) [
+//       return true;
+//     }else if (true) {
+//
+//     }
+//     ]
+// }
 
 
 
