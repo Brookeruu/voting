@@ -18,9 +18,11 @@ $(document).ready(function() {
     if(result === true) {
       $(".overAge").show();
       $(".underAge").hide();
+      $("#meter").show();
     } else {
       $(".underAge").show();
-        $(".overAge").hide();
+      $(".overAge").hide();
+      $("#meter").hide();
     }
 
     event.preventDefault();
