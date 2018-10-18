@@ -7,7 +7,6 @@ var voteAge = function(age) {
     }
   }
 
-  var politicalView = $("input:radio[name=abortion]:checked").val();
 // var proAbortion = function()
 //
 
@@ -17,6 +16,7 @@ $(document).ready(function() {
   $("form#age").submit(function(event) {
     var inputOver18 = parseInt($("input#inputAge").val());
     var result = voteAge(inputOver18);
+    var politicalView = $("input:radio[name=abortion]:checked").val();
 
     if(result) {
       $(".overAge").show();
@@ -33,12 +33,12 @@ $(document).ready(function() {
         $("p#conservative").hide();
         $("p#moderate").hide();
       }
-      if(politicalView === "option1") {
+      if(politicalView === "option2") {
         $("p#conservative").show();
         $("p#liberal").hide();
         $("p#moderate").hide();
       }
-      if(politicalView === "option1") {
+      if(politicalView === "option3") {
         $("p#moderate").show();
         $("p#conservative").hide();
         $("p#liberal").hide();
